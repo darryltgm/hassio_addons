@@ -6,7 +6,7 @@ A Home Assistant addon for a software defined radio tuned to listen for 433MHz R
 
 Add the repository URL under **Supervisor → Add-on store → ⋮ → Manage add-on repositories**:
 
-    https://github.com/thejeffreystone/hassio-addons
+    https://github.com/darryltgm/hassio-addons
 
 Then search for `Accurite to home Assistant` and install it.
 
@@ -15,7 +15,7 @@ Then search for `Accurite to home Assistant` and install it.
 Example add-on configuration:
 
 ```yaml
-mqtt_host: 192.168.7.100
+mqtt_host: 192.168.0.200
 mqtt_user: mqtt_user
 mqtt_password: mqtt_pass
 mqtt_topic: rtl_433

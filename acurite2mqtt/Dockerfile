@@ -4,7 +4,7 @@ FROM $BUILD_FROM
 
 ENV LANG C.UTF-8
 
-MAINTAINER Jeffrey Stone
+MAINTAINER Darryl
 
 LABEL Description="This image is used to start a the RTL433 to HASS script that will monitor for 433Mhz devcices and send the data to an MQTT server"
 

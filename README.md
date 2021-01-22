@@ -7,8 +7,8 @@
 
 Add the repository URL under **Supervisor → Add-on store → ⋮ → Manage add-on repositories**:
 
-    https://github.com/thejeffreystone/hassio_addons
+    https://github.com/darryltgm/hassio_addons
 
-The repository includes one add-on:
+The repository includes one add-on::
 
 - **acurite2mqtt** is a beta release that uses uses a SDR to connect Acurite Weather Sensors to Home Assistant
