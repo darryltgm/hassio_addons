@@ -1,6 +1,7 @@
 # Home Assistant Add-on: Acurite2mqtt
 
 A Home Assistant addon for a software defined radio tuned to listen for 433MHz RF transmissions from Acurite Weather Sensors and republish the data via MQTT.
+Fork from thejeffreystone
 
 ## Installation
 
@@ -54,7 +55,7 @@ This determines what devices the software listens to. `-R 11 -R 40 -R 41 -R 55 -
 is the Accurite sensors. If the protocol is blank it will listen for all devices
 which may be noisy.
 
-For all possible protocols visit <https://github.com/thejeffreystone/hassio_addons/blob/main/acurite2mqtt/PROTOCOLS.md>
+For all possible protocols visit <https://github.com/darryltgm/hassio_addons/blob/main/acurite2mqtt/PROTOCOLS.md>
 
 ### Option: `discovery_prefix`
 

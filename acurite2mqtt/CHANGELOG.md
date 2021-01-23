@@ -6,7 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [0.3.1]
+## [0.3.1] tgm
 ### Changed
 - Added Debug option to print messages to log
 - Reverted back to old method of naming devices

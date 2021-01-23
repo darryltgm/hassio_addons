@@ -1,5 +1,5 @@
 {
-  "name": "Acurite to Home Assistant",
+  "name": "Acurite and Remotes to Home Assistant",
   "version": "0.3.1",
   "slug": "acurite2mqtt",
   "description": "Acurite Sensors to Home Assistant via MQTT with Autodiscovery",
@@ -11,12 +11,12 @@
   "boot": "auto",
   "options":
     {
-    "mqtt_host": "192.168.1.100",
+    "mqtt_host": "192.168.0.200",
     "mqtt_user": "user",
     "mqtt_password": "pass",
     "mqtt_topic": "rtl_433",
     "mqtt_retain" : "true",
-    "protocol": "-R 11 -R 40 -R 41 -R 55 -R 74",
+    "protocol": "-R 11 -R 30 -R 40 -R 41 -R 55 -R 74 -R 86",
     "discovery_prefix": "homeassistant",
     "discovery_interval": 600,
     "debug": "false"
