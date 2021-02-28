@@ -292,16 +292,6 @@ mappings = {
         }
     },
 
-    "noise": {
-        "device_type": "sensor",
-        "object_suffix": "noise",
-        "config": {
-            "device_class": "signal_strength",
-            "unit_of_measurement": "dB",
-            "value_template": "{{ value|float|round(2) }}"
-        }
-    },
-
     "depth_cm": {
         "device_type": "sensor",
         "object_suffix": "D",
@@ -373,24 +363,6 @@ mappings = {
         }
     },
 
-    "freq": {
-        "device_type": "sensor",
-        "object_suffix": "freq",
-        "config": {
-            "name": "Frequency",
-            "value_template": "{{ value|float }}"
-        }
-    },
-
-    "tristate": {
-        "device_type": "sensor",
-        "object_suffix": "tristate",
-        "config": {
-            "name": "Tri State",
-            "value_template": "{{ value }}"
-}
-    },
-
     "cmd": {
         "device_type": "sensor",
         "object_suffix": "cmd",
@@ -407,15 +379,6 @@ mappings = {
             "force_update": "true",
             "name": "Code",
             "value_template": "{{ value }}"
-        }
-    },
-
-    "unit": {
-        "device_type": "sensor",
-        "object_suffix": "unit",
-        "config": {
-            "name": "Unit",
-			"value_template": "{{ value|int }}"
         }
     },
 }
