@@ -272,16 +272,6 @@ mappings = {
         }
     },
 
-    "rssi": {
-        "device_type": "sensor",
-        "object_suffix": "rssi",
-        "config": {
-            "device_class": "signal_strength",
-            "unit_of_measurement": "dB",
-            "value_template": "{{ value|float|round(2) }}"
-        }
-    },
-
     "snr": {
         "device_type": "sensor",
         "object_suffix": "snr",
