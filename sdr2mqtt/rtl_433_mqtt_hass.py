@@ -57,7 +57,7 @@ if AUTO_DISCOVERY == "true":
     auto_discovery  = True
 else:
     auto_discovery  = False
-    
+
 mappings = {
     "time": {
         "device_type": "sensor",
