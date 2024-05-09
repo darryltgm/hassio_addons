@@ -17,11 +17,16 @@ Example add-on configuration:
 
 ```yaml
 mqtt_host: 192.168.0.200
+mqtt_port: 1883
 mqtt_user: mqtt_user
 mqtt_password: mqtt_pass
 mqtt_topic: rtl_433
 mqtt_retain: 'true'
-protocol: '-R 11 -R 40 -R 41 -R 55 -R 74'
+protocol: '-R 11 -R 40 -R 41 -R 55 -R 74 -R 86'
+whitelist_enable: true
+whitelist: 2169 6417 9143 6449 6000 3125
+expire_after: 60
+units: 'si'
 discovery_prefix: homeassistant
 discovery_interval: 600
 debug: false
@@ -30,6 +35,10 @@ debug: false
 ### Option: `mqtt_host`
 
 The `mqtt_host` option is the ip address of your mqtt server. If you are using the embeded server in Home Assistant just use your instances ip address.
+
+### Option: `mqtt_port`
+
+The `mqtt_port` option is the port of your mqtt server. If you are using the embeded server in Home Assistant just leave this as 1883.
 
 ### Option: `mqtt_user`
 
@@ -55,7 +64,27 @@ This determines what devices the software listens to. `-R 11 -R 40 -R 41 -R 55 -
 is the Accurite sensors. If the protocol is blank it will listen for all devices
 which may be noisy.
 
-For all possible protocols visit <https://github.com/darryltgm/hassio_addons/blob/main/acurite2mqtt/PROTOCOLS.md>
+For all possible protocols visit <https://github.com/thejeffreystone/hassio_addons/blob/main/acurite2mqtt/PROTOCOLS.md>
+
+### Option: `whitelist_enable`
+
+Set to `true` to enable filtering to allow only the delcared device id's to be processed.  You may turn this off periodically
+to scan/acquire new device id's.  But be cautious... any undesirable devices will need to be deleted from your configuration.
+
+### Option: `whitelist`
+
+This is a `space separated` list of device id's that are desired to be received and processed.  Any devices that are not in this
+list will be ignored (if whitelist_enables is set to true).
+
+### Option: `expire_after`
+
+This is a `integer` value that will set an individual sensor entity to `unknown` if no payload is received within the specified seconds. The default value of 0 disables this feature.
+
+### Option: `units`
+
+Sets the meansurement units. 
+- `si` = Metric
+- `customary` = Imperial / Customary  
 
 ### Option: `discovery_prefix`
 
