@@ -1,6 +1,6 @@
 {
   "name": "Acurite and Remotes to Home Assistant",
-  "version": "0.3.3",
+  "version": "0.3.25",
   "slug": "acurite2mqtt",
   "description": "Acurite Sensors to Home Assistant via MQTT with Autodiscovery",
   "url": "https://github.com/darryltgm/hassio_addons",
@@ -12,25 +12,37 @@
   "options":
     {
     "mqtt_host": "192.168.0.200",
+    "mqtt_port": 1883,
     "mqtt_user": "user",
     "mqtt_password": "pass",
     "mqtt_topic": "rtl_433",
     "mqtt_retain" : "false",
     "protocol": "-R 11 -R 20 -R 30 -R 40 -R 41 -R 55 -R 74 -R 86",
+    "whitelist_enable": "false",
+    "whitelist": "",
+    "expire_after": 0,
+    "units": "customary",
     "discovery_prefix": "homeassistant",
     "discovery_interval": 600,
+    "auto_discovery": "true",
     "debug": "false"
   },
   "schema":
     {
     "mqtt_host": "str",
+    "mqtt_port": "int",
     "mqtt_user": "str",
     "mqtt_password": "str",
     "mqtt_topic": "str",
-    "mqtt_retain" : "str",
+    "mqtt_retain" : "bool",
     "protocol": "str",
+    "whitelist_enable": "bool",
+    "whitelist": "str",
+    "expire_after": "int",
+    "units": "str",
     "discovery_prefix": "str",
     "discovery_interval": "int",
+    "auto_discovery": "bool",
     "debug": "bool"
    }
 }
